@@ -1,5 +1,5 @@
 import { Download, Github, Linkedin, Mail } from 'lucide-react';
-import profilePhoto from '@/assets/profile-photo.jpg';
+import profilePhoto from '@/assets/profile-photo4.webp'; // Replace with your own profile photo
 
 const HeroSection = () => {
   return (
@@ -16,16 +16,15 @@ const HeroSection = () => {
         </div>
 
         <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-display mb-6">
-          <span className="gradient-text">Alexandre Dupont</span>
+          <span className="gradient-text">Sandrine PICHLA</span>
         </h1>
 
         <p className="text-lg sm:text-xl md:text-2xl text-muted-foreground mb-4">
-          Développeur Full Stack & Designer UI/UX
+          Développeur Full Stack
         </p>
 
         <p className="text-base md:text-lg text-muted-foreground mb-8 max-w-2xl mx-auto leading-relaxed px-4">
-          Passionné par la création d'expériences digitales innovantes, je combine 
-          expertise technique et vision créative pour donner vie à des projets web ambitieux.
+          Passionnée 
         </p>
 
         <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8 px-4">

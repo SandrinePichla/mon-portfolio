@@ -11,8 +11,7 @@ const Navigation = ({ activeSection, onSectionChange }: NavigationProps) => {
 
   const navItems = [
     { id: 'home', label: 'Accueil', icon: Home },
-    { id: 'about', label: 'À propos', icon: User },
-    { id: 'experience', label: 'Expérience', icon: Briefcase },
+    { id: 'about', label: 'À propos', icon: User },    
     { id: 'skills', label: 'Compétences', icon: Award },
     { id: 'mindmap', label: 'Mind Map', icon: Brain },
     { id: 'portfolio', label: 'Portfolio', icon: Code },
