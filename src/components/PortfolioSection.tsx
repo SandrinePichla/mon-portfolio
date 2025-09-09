@@ -1,5 +1,5 @@
 import { ExternalLink, Github } from 'lucide-react';
-import project1 from '@/assets/project1.jpg';
+import project1 from '@/assets/booki.png';
 import project2 from '@/assets/project2.jpg';
 import project3 from '@/assets/project3.jpg';
 
@@ -86,12 +86,12 @@ const PortfolioSection = () => {
   // DONNÉES STATIQUES (pour la démo)
   const projects = [
     {
-      title: "Dashboard Analytics",
-      description: "Plateforme d'analyse de données en temps réel avec visualisations interactives. Interface intuitive pour le suivi des KPIs et génération de rapports automatisés.",
+      title: "BOOKI Starter Code",
+      description: "Développement d'un site Internet qui permette aux usagers de trouver des hébergements et des activités dans la ville de leur choix.",
       image: project1,
-      technologies: ["React", "TypeScript", "D3.js", "Node.js", "PostgreSQL"],
-      liveLink: "#",
-      githubLink: "#"
+      technologies: ["HTML", "CSS", "Github"],
+      liveLink: "https://sandrinepichla.github.io/booki-starter-code/",
+      githubLink: "https://github.com/SandrinePichla/booki-starter-code"
     },
     {
       title: "E-Commerce Platform",
