@@ -14,11 +14,11 @@
     --card: 240 8% 8%;
     --card-foreground: 210 40% 98%;
 
-    --primary: 217 91% 60%;
+    --primary: 217 91% 60%;  /* couleur début texte */
     --primary-foreground: 240 10% 4%;
     --primary-glow: 220 100% 70%;
 
-    --secondary: 270 60% 55%;
+    --secondary: 270 60% 55%; /* couleur fin texte */
     --secondary-foreground: 210 40% 98%;
 
     --accent: 45 90% 65%;

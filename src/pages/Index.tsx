@@ -83,7 +83,7 @@ const Index = () => {
       <footer className="md:ml-64 py-8 px-6 border-t border-border">
         <div className="max-w-4xl mx-auto text-center">
           <p className="text-muted-foreground">
-            © 2024 Alexandre Dupont. Tous droits réservés. Développé avec passion ❤️
+            © 2025 Sandrine PICHLA. Tous droits réservés. Développé avec passion ❤️
           </p>
         </div>
       </footer>

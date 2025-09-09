@@ -43,7 +43,7 @@ const ContactSection = () => {
                   </div>
                   <div>
                     <p className="font-medium">Email</p>
-                    <p className="text-muted-foreground">alexandre.dupont@example.com</p>
+                    <p className="text-muted-foreground">sandrinepichla@hotmail.com</p>
                   </div>
                 </div>
 
