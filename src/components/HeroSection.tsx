@@ -1,5 +1,6 @@
 import { Download, Github, Linkedin, Mail } from 'lucide-react';
-import profilePhoto from '@/assets/profile-photo4.webp'; // Replace with your own profile photo
+import profilePhoto from '@/assets/profile-photo4.webp'; // ma photo de profil
+import { Link } from 'react-router-dom'; // en haut du fichier
 
 const HeroSection = () => {
   return (
@@ -28,10 +29,14 @@ const HeroSection = () => {
         </p>
 
         <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8 px-4">
-          <button className="px-6 py-3 bg-gradient-primary rounded-lg font-semibold text-primary-foreground hover:shadow-elegant transition-all duration-300 flex items-center justify-center gap-2">
-            <Download size={18} />
-            Télécharger CV
-          </button>
+          <Link
+          to="/cv"
+          className="px-6 py-3 bg-gradient-primary rounded-lg font-semibold text-primary-foreground hover:shadow-elegant transition-all duration-300 flex items-center justify-center gap-2"
+          target="_blank"
+          >
+          <Download size={18} />
+          Voir mon CV
+          </Link>
           
           <button className="px-6 py-3 bg-card border border-border rounded-lg font-semibold hover:shadow-card transition-all duration-300">
             Voir mes projets

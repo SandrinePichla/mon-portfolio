@@ -1,7 +1,11 @@
 import { ExternalLink, Github } from 'lucide-react';
-import project1 from '@/assets/booki.png';
-import project2 from '@/assets/project2.jpg';
-import project3 from '@/assets/project3.jpg';
+import project1 from '@/assets/project1.webp';
+import project2 from '@/assets/project2.webp';
+import project3 from '@/assets/project3.webp';
+import project4 from '@/assets/project4.webp';
+import project5 from '@/assets/project5.webp';
+import project6 from '@/assets/project6.webp';
+import project7 from '@/assets/project7.webp';
 
 const PortfolioSection = () => {
   // ====== SIMULATION D'APPEL API POUR RÉCUPÉRER LES PROJETS ======
@@ -86,7 +90,7 @@ const PortfolioSection = () => {
   // DONNÉES STATIQUES (pour la démo)
   const projects = [
     {
-      title: "BOOKI Starter Code",
+      title: "BOOKI",
       description: "Développement d'un site Internet qui permette aux usagers de trouver des hébergements et des activités dans la ville de leur choix.",
       image: project1,
       technologies: ["HTML", "CSS", "Github"],
@@ -94,21 +98,54 @@ const PortfolioSection = () => {
       githubLink: "https://github.com/SandrinePichla/booki-starter-code"
     },
     {
-      title: "E-Commerce Platform",
-      description: "Solution e-commerce complète avec gestion des stocks, paiements sécurisés et interface d'administration avancée. Optimisée pour les performances et le SEO.",
+      title: "Sophie BLUEL Architecte d'interieur",
+      description: "En tant que développeur front-end pour l’agence ArchiWebos, je viens en renfort d’une équipe qui travaille sur la conception du site portfolio d’une architecte d’intérieur.",
       image: project2,
-      technologies: ["Next.js", "Stripe", "MongoDB", "Tailwind CSS"],
+      technologies: ["JavaScript"],
       liveLink: "#",
       githubLink: "#"
     },
     {
-      title: "Task Management App",
-      description: "Application mobile de gestion de tâches avec synchronisation cloud, notifications push et collaboration en équipe. Interface élégante et intuitive.",
+      title: "Nina Carducci - photographe",
+      description: "Développeur freelance, j’ai accompagné Nina Carducci dans l’optimisation complète de son site vitrine, en améliorant ses performances, son référencement (SEO local et global), son accessibilité, et en corrigeant plusieurs bugs pour garantir une expérience utilisateur fluide et moderne. .",
       image: project3,
-      technologies: ["React Native", "Firebase", "Redux", "Expo"],
-      liveLink: "#",
-      githubLink: "#"
-    }
+      technologies: ["Chrome DevTools", "SEO", "Wave", "Meta"],
+      liveLink: "https://sandrinepichla.github.io/booki-starter-code/",
+      githubLink: "https://github.com/SandrinePichla/booki-starter-code"
+    },
+    {
+      title: "Kasa",
+      description: "Développement d'un site Internet qui permette aux usagers de trouver des hébergements et des activités dans la ville de leur choix.",
+      image: project4,
+      technologies: ["HTML", "CSS", "Github", "MongoDB"],
+      liveLink: "https://sandrinepichla.github.io/booki-starter-code/",
+      githubLink: "https://github.com/SandrinePichla/booki-starter-code"
+    },
+    {
+      title: "Mon vieux grimoire",
+      description: "Développement d'un site Internet qui permette aux usagers de trouver des hébergements et des activités dans la ville de leur choix.",
+      image: project5,
+      technologies: ["HTML", "CSS", "Github", "MongoDB"],
+      liveLink: "https://sandrinepichla.github.io/booki-starter-code/",
+      githubLink: "https://github.com/SandrinePichla/booki-starter-code"
+    },
+    {
+      title: "Qwenta",
+      description: "Développement d'un site Internet qui permette aux usagers de trouver des hébergements et des activités dans la ville de leur choix.",
+      image: project6,
+      technologies: ["HTML", "CSS", "Github", "MongoDB"],
+      liveLink: "https://sandrinepichla.github.io/booki-starter-code/",
+      githubLink: "https://github.com/SandrinePichla/booki-starter-code"
+    },
+    {
+      title: "Mon Portfolio",
+      description: "Développement d'un site Internet qui permette aux usagers de trouver des hébergements et des activités dans la ville de leur choix.",
+      image: project7,
+      technologies: ["HTML", "CSS", "Github", "MongoDB"],
+      liveLink: "https://sandrinepichla.github.io/booki-starter-code/",
+      githubLink: "https://github.com/SandrinePichla/booki-starter-code"
+    },
+
   ];
 
   return (
