@@ -1,8 +1,13 @@
 import { Download, Github, Linkedin, Mail } from 'lucide-react';
 import profilePhoto from '@/assets/profile-photo4.webp'; // ma photo de profil
-import { Link } from 'react-router-dom'; // en haut du fichier
+import { Link } from 'react-router-dom'; 
 
-const HeroSection = () => {
+type HeroSectionProps = {
+  onScrollToPortfolio: () => void;
+};
+
+
+const HeroSection = ({ onScrollToPortfolio }: HeroSectionProps) => {
   return (
     <section className="hero-section min-h-screen flex items-center justify-center p-6">
       <div className="max-w-4xl mx-auto text-center">
@@ -23,11 +28,7 @@ const HeroSection = () => {
         <p className="text-lg sm:text-xl md:text-2xl text-muted-foreground mb-4">
           Développeur Full Stack
         </p>
-
-        <p className="text-base md:text-lg text-muted-foreground mb-8 max-w-2xl mx-auto leading-relaxed px-4">
-          Passionnée 
-        </p>
-
+        
         <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8 px-4">
           <Link
           to="/cv"
@@ -38,19 +39,22 @@ const HeroSection = () => {
           Voir mon CV
           </Link>
           
-          <button className="px-6 py-3 bg-card border border-border rounded-lg font-semibold hover:shadow-card transition-all duration-300">
-            Voir mes projets
+          <button 
+          onClick={onScrollToPortfolio}
+          className="px-6 py-3 bg-card border border-border rounded-lg font-semibold hover:shadow-card transition-all duration-300"
+          >
+          Voir mes projets
           </button>
         </div>
 
         <div className="flex justify-center gap-4 sm:gap-6 px-4">
-          <a href="https://github.com" className="p-3 bg-card rounded-lg border border-border hover:shadow-card transition-all duration-300">
+          <a href="https://github.com/SandrinePichla" className="p-3 bg-card rounded-lg border border-border hover:shadow-card transition-all duration-300">
             <Github size={20} />
           </a>
-          <a href="https://linkedin.com" className="p-3 bg-card rounded-lg border border-border hover:shadow-card transition-all duration-300">
+          <a href="https://www.linkedin.com/in/sandrine-pichla-09514794/" className="p-3 bg-card rounded-lg border border-border hover:shadow-card transition-all duration-300">
             <Linkedin size={20} />
           </a>
-          <a href="mailto:contact@example.com" className="p-3 bg-card rounded-lg border border-border hover:shadow-card transition-all duration-300">
+          <a href="mailto:sandrinepichla@hotmail.com" className="p-3 bg-card rounded-lg border border-border hover:shadow-card transition-all duration-300">
             <Mail size={20} />
           </a>
         </div>

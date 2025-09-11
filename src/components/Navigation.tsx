@@ -13,7 +13,7 @@ const Navigation = ({ activeSection, onSectionChange }: NavigationProps) => {
     { id: 'home', label: 'Accueil', icon: Home },
     { id: 'about', label: 'À propos', icon: User },    
     { id: 'mindmap', label: 'Mind Map', icon: Brain },
-    { id: 'portfolio', label: 'Portfolio', icon: Code },
+    { id: 'portfolio', label: 'Projets', icon: Code },
     { id: 'contact', label: 'Contact', icon: Mail },
   ];
 
@@ -35,7 +35,7 @@ const Navigation = ({ activeSection, onSectionChange }: NavigationProps) => {
         md:translate-x-0
       `}>
         <div className="p-6">
-          <h2 className="text-2xl font-display gradient-text mb-8">Portfolio</h2>
+          <h2 className="text-2xl font-display gradient-text mb-8">Projets</h2>
           
           <ul className="space-y-2">
             {navItems.map(({ id, label, icon: Icon }) => (

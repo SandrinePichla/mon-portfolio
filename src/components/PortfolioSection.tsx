@@ -151,7 +151,7 @@ const PortfolioSection = () => {
   return (
     <section className="py-20 px-6 bg-muted/20">
       <div className="max-w-6xl mx-auto">
-        <h2 className="text-4xl font-display gradient-text mb-12 text-center">Portfolio</h2>
+        <h2 className="text-4xl font-display gradient-text mb-12 text-center">Projets</h2>
         <p className="text-lg text-muted-foreground text-center mb-16 max-w-2xl mx-auto">
           Découvrez une sélection de mes projets récents, alliant innovation technique et design soigné.
         </p>
@@ -206,27 +206,7 @@ const PortfolioSection = () => {
           ))}
         </div>
 
-        {/* Additional Projects Grid */}
-        <div className="mt-16">
-          <h3 className="text-2xl font-display text-center mb-8">Autres projets</h3>
-          
-          <div className="grid md:grid-cols-3 gap-6">
-            {[1, 2, 3].map((i) => (
-              <div key={i} className="card-elegant p-6 text-center">
-                <div className="w-12 h-12 bg-gradient-primary rounded-lg mx-auto mb-4 flex items-center justify-center">
-                  <span className="text-primary-foreground font-bold">{i}</span>
-                </div>
-                <h4 className="font-semibold mb-2">Projet {i}</h4>
-                <p className="text-sm text-muted-foreground mb-4">
-                  Description courte du projet avec les technologies utilisées.
-                </p>
-                <a href="#" className="text-primary hover:text-primary-glow transition-colors">
-                  Voir plus →
-                </a>
-              </div>
-            ))}
-          </div>
-        </div>
+        
       </div>
     </section>
   );

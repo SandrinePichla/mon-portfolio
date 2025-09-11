@@ -54,7 +54,7 @@ const Index = () => {
       {/* Main Content */}
       <main className="md:ml-64">
         <section id="home">
-          <HeroSection />
+          <HeroSection onScrollToPortfolio={() => scrollToSection('portfolio')} />
         </section>
 
         <section id="about">
@@ -78,7 +78,7 @@ const Index = () => {
       <footer className="md:ml-64 py-8 px-6 border-t border-border">
         <div className="max-w-4xl mx-auto text-center">
           <p className="text-muted-foreground">
-            © 2025 Sandrine PICHLA. Tous droits réservés. Développé avec passion ❤️
+            © 2025 Sandrine PICHLA. Tous droits réservés.
           </p>
         </div>
       </footer>

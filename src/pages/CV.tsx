@@ -1,4 +1,4 @@
-import profilePhoto from "@/assets/sandrine_pichla_mini.png";
+import profilePhoto from "@/assets/sandrine_pichla_mini.webp";
 
 const CV = () => {
   return (

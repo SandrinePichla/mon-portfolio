@@ -9,10 +9,24 @@ const ContactSection = () => {
     message: ''
   });
 
+  const [submitted, setSubmitted] = useState(false);
+
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    // Logique d'envoi du formulaire
+
+     // Simule l'envoi avec confirmation
     console.log('Form submitted:', formData);
+    setSubmitted(true);
+  // Réinitialisation du formulaire
+    setFormData({
+      name: '',
+      email: '',
+      subject: '',
+      message: ''
+    });
+
+    // Cache le message de confirmation après 4 secondes
+    setTimeout(() => setSubmitted(false), 4000);
   };
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
@@ -21,6 +35,7 @@ const ContactSection = () => {
       [e.target.name]: e.target.value
     });
   };
+  
 
   return (
     <section className="py-20 px-6">
@@ -53,7 +68,7 @@ const ContactSection = () => {
                   </div>
                   <div>
                     <p className="font-medium">Téléphone</p>
-                    <p className="text-muted-foreground">+33 6 12 34 56 78</p>
+                    <p className="text-muted-foreground">+33 6 72 75 81 48</p>
                   </div>
                 </div>
 
@@ -63,7 +78,7 @@ const ContactSection = () => {
                   </div>
                   <div>
                     <p className="font-medium">Localisation</p>
-                    <p className="text-muted-foreground">Paris, France</p>
+                    <p className="text-muted-foreground">Lyon, France</p>
                   </div>
                 </div>
               </div>
