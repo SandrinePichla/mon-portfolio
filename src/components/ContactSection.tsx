@@ -11,23 +11,27 @@ const ContactSection = () => {
 
   const [submitted, setSubmitted] = useState(false);
 
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
+  const handleSubmit = async (e: React.FormEvent) => {
+  e.preventDefault();
 
-     // Simule l'envoi avec confirmation
-    console.log('Form submitted:', formData);
-    setSubmitted(true);
-  // Réinitialisation du formulaire
-    setFormData({
-      name: '',
-      email: '',
-      subject: '',
-      message: ''
+  try {
+    const res = await fetch('http://localhost:5000/api/contact', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(formData)
     });
 
-    // Cache le message de confirmation après 4 secondes
-    setTimeout(() => setSubmitted(false), 4000);
-  };
+    const data = await res.json();
+    if (res.ok) {
+      alert('Message envoyé avec succès !');
+    } else {
+      alert(`Erreur : ${data.error}`);
+    }
+  } catch (err) {
+    alert("Erreur réseau");
+    console.error(err);
+  }
+};
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     setFormData({

@@ -93,7 +93,7 @@ const PortfolioSection = () => {
       title: "BOOKI",
       description: "Développement d'un site Internet qui permette aux usagers de trouver des hébergements et des activités dans la ville de leur choix.",
       image: project1,
-      technologies: ["HTML", "CSS", "Github"],
+      technologies: ["HTML", "CSS", "Figma", "Github"],
       liveLink: "https://sandrinepichla.github.io/booki-starter-code/",
       githubLink: "https://github.com/SandrinePichla/booki-starter-code"
     },
