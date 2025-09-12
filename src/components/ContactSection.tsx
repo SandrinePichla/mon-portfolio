@@ -1,5 +1,6 @@
-import { Mail, Phone, MapPin, Send } from 'lucide-react';
+import { Mail, Phone, MapPin, Send, CheckCircle, AlertCircle } from 'lucide-react';
 import { useState } from 'react';
+import { API_URL } from '../config';
 
 const ContactSection = () => {
   const [formData, setFormData] = useState({
@@ -9,29 +10,42 @@ const ContactSection = () => {
     message: ''
   });
 
-  const [submitted, setSubmitted] = useState(false);
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [submitStatus, setSubmitStatus] = useState<'idle' | 'success' | 'error'>('idle');
+  const [errorMessage, setErrorMessage] = useState('');
 
   const handleSubmit = async (e: React.FormEvent) => {
-  e.preventDefault();
+    e.preventDefault();
+    setIsSubmitting(true);
+    setSubmitStatus('idle');
+    setErrorMessage('');
 
   try {
-    const res = await fetch('http://localhost:5000/api/contact', {
+    console.log('API_URL:', API_URL);
+
+    const res = await fetch(`${API_URL}/api/contact`, {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify(formData)
     });
 
     const data = await res.json();
+
     if (res.ok) {
-      alert('Message envoyé avec succès !');
-    } else {
-      alert(`Erreur : ${data.error}`);
+        setSubmitStatus('success');
+        setFormData({ name: '', email: '', subject: '', message: '' });
+      } else {
+        setSubmitStatus('error');
+        setErrorMessage(data.error || 'Une erreur est survenue');
+      }
+    } catch (err) {
+      console.error('Erreur réseau:', err);
+      setSubmitStatus('error');
+      setErrorMessage('Erreur de connexion au serveur. Vérifiez que votre backend est déployé et accessible.');
+    } finally {
+      setIsSubmitting(false);
     }
-  } catch (err) {
-    alert("Erreur réseau");
-    console.error(err);
-  }
-};
+  };
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     setFormData({
@@ -104,6 +118,21 @@ const ContactSection = () => {
           <form onSubmit={handleSubmit} className="card-elegant p-8">
             <h3 className="text-2xl font-display mb-6">Envoyez-moi un message</h3>
             
+            {/* Messages de statut */}
+            {submitStatus === 'success' && (
+              <div className="mb-6 p-4 bg-green-50 border border-green-200 rounded-lg flex items-center gap-2">
+                <CheckCircle className="text-green-600" size={20} />
+                <span className="text-green-800">Message envoyé avec succès !</span>
+              </div>
+            )}
+
+            {submitStatus === 'error' && (
+              <div className="mb-6 p-4 bg-red-50 border border-red-200 rounded-lg flex items-center gap-2">
+                <AlertCircle className="text-red-600" size={20} />
+                <span className="text-red-800">{errorMessage}</span>
+              </div>
+            )}
+            
             <div className="space-y-6">
               <div className="grid md:grid-cols-2 gap-4">
                 <div>
@@ -118,6 +147,7 @@ const ContactSection = () => {
                     onChange={handleChange}
                     className="w-full px-4 py-3 bg-muted rounded-lg border border-border focus:outline-none focus:ring-2 focus:ring-primary transition-all duration-300"
                     required
+                    disabled={isSubmitting}
                   />
                 </div>
                 
@@ -133,6 +163,7 @@ const ContactSection = () => {
                     onChange={handleChange}
                     className="w-full px-4 py-3 bg-muted rounded-lg border border-border focus:outline-none focus:ring-2 focus:ring-primary transition-all duration-300"
                     required
+                    disabled={isSubmitting}
                   />
                 </div>
               </div>
@@ -149,6 +180,7 @@ const ContactSection = () => {
                   onChange={handleChange}
                   className="w-full px-4 py-3 bg-muted rounded-lg border border-border focus:outline-none focus:ring-2 focus:ring-primary transition-all duration-300"
                   required
+                  disabled={isSubmitting}
                 />
               </div>
 
@@ -164,15 +196,19 @@ const ContactSection = () => {
                   rows={6}
                   className="w-full px-4 py-3 bg-muted rounded-lg border border-border focus:outline-none focus:ring-2 focus:ring-primary transition-all duration-300 resize-none"
                   required
+                  disabled={isSubmitting}
                 />
               </div>
 
               <button
                 type="submit"
-                className="w-full px-6 py-3 bg-gradient-primary rounded-lg font-semibold text-primary-foreground hover:shadow-elegant transition-all duration-300 flex items-center justify-center gap-2"
+                disabled={isSubmitting}
+                className={`w-full px-6 py-3 bg-gradient-primary rounded-lg font-semibold text-primary-foreground hover:shadow-elegant transition-all duration-300 flex items-center justify-center gap-2 ${
+                  isSubmitting ? 'opacity-70 cursor-not-allowed' : ''
+                }`}
               >
                 <Send size={18} />
-                Envoyer le message
+                {isSubmitting ? 'Envoi en cours...' : 'Envoyer le message'}
               </button>
             </div>
           </form>

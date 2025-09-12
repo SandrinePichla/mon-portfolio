@@ -20,10 +20,18 @@ router.post('/', async (req, res) => {
     });
 
     await transporter.sendMail({
-      from: `"${name}" <${email}>`,
+      from: process.env.EMAIL_USER, // Changé : utiliser EMAIL_USER comme expéditeur
+      replyTo: email, // Ajouté : permet de répondre directement à l'utilisateur
       to: process.env.EMAIL_USER,
-      subject: subject,
-      html: `<p>${message}</p>`
+      subject: `Contact Portfolio: ${subject}`,
+      html: `
+        <h3>Nouveau message depuis votre portfolio</h3>
+        <p><strong>Nom:</strong> ${name}</p>
+        <p><strong>Email:</strong> ${email}</p>
+        <p><strong>Sujet:</strong> ${subject}</p>
+        <p><strong>Message:</strong></p>
+        <p>${message}</p>
+      `
     });
 
     res.status(200).json({ message: 'Message envoyé avec succès !' });
