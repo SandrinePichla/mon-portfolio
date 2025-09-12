@@ -216,25 +216,37 @@ const SkillsMindMap = () => {
                     className="absolute transform -translate-x-1/2 -translate-y-1/2 z-10"
                     style={{
                       left: center.x + (branch.position.x / 2) * center.scale,
-                      top: center.y + (branch.position.y / 2) * center.scale
+                      top: center.y + (branch.position.y / 2) * center.scale,
                     }}
                   >
                     <div
-                      className={`w-16 h-16 rounded-full flex items-center justify-center shadow-card cursor-pointer hover:scale-110 transition-all duration-300 ${
+                      className={`rounded-full flex items-center justify-center shadow-card cursor-pointer hover:scale-110 transition-all duration-300 ${
                         selectedNode === branch.id ? "ring-4 ring-primary shadow-elegant" : ""
                       }`}
                       style={{
+                        width: `${64 * center.scale}px`,
+                        height: `${64 * center.scale}px`,
                         backgroundColor: `hsl(var(--${branch.color}))`,
-                        opacity: selectedNode && selectedNode !== branch.id ? 0.5 : 1
+                        opacity: selectedNode && selectedNode !== branch.id ? 0.5 : 1,
                       }}
                       onClick={() =>
                         setSelectedNode(selectedNode === branch.id ? null : branch.id)
                       }
                     >
-                      <IconComponent size={24} className="text-background" />
+                      <IconComponent size={24 * center.scale} className="text-background" />
                     </div>
-                    <div className="absolute top-full mt-2 left-1/2 transform -translate-x-1/2 whitespace-nowrap">
-                      <span className="text-xs font-medium text-muted-foreground">{branch.title}</span>
+
+                    {/* Label sous la bulle */}
+                    <div className="absolute top-full mt-2 left-1/2 transform -translate-x-1/2">
+                      <span
+                        className="font-medium text-muted-foreground block truncate text-center"
+                        style={{
+                          fontSize: `${12 * center.scale}px`,   // taille du texte qui suit le scale
+                          maxWidth: `${70 * center.scale}px`,   // largeur max proportionnelle
+                        }}
+                      >
+                        {branch.title}
+                      </span>
                     </div>
                   </div>
                 );
