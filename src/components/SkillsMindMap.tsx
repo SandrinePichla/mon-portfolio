@@ -1,5 +1,5 @@
 import React, { useEffect, useRef, useState } from 'react';
-import { Brain, Code, Database, Palette, Server, Globe, Smartphone, Wrench } from 'lucide-react';
+import { Brain, Code, Database, Palette, Server, Globe, Eye, Wrench, Gauge, Rocket } from 'lucide-react';
 
 const SkillsMindMap = () => {
   const [selectedNode, setSelectedNode] = useState<string | null>(null);
@@ -44,122 +44,110 @@ const SkillsMindMap = () => {
       icon: Brain,
       color: "primary"
     },
-    branches: [
-      {
-        id: "frontend",
-        title: "Frontend",
-        icon: Code,
-        color: "accent",
-        position: { x: 300, y: 0 },
-        skills: [
-          { name: "React", level: 95, experience: "5+ ans" },
-          { name: "TypeScript", level: 90, experience: "4+ ans" },
-          { name: "Next.js", level: 85, experience: "3+ ans" },
-          { name: "Vue.js", level: 80, experience: "2+ ans" },
-          { name: "Tailwind CSS", level: 95, experience: "4+ ans" },
-          { name: "SCSS", level: 90, experience: "5+ ans" },
-          { name: "Framer Motion", level: 75, experience: "2+ ans" }
-        ]
-      },
-      {
-        id: "backend",
-        title: "Backend",
-        icon: Server,
-        color: "secondary",
-        position: { x: 212, y: 212 },
-        skills: [
-          { name: "Node.js", level: 90, experience: "4+ ans" },
-          { name: "Express", level: 85, experience: "3+ ans" },
-          { name: "Python", level: 80, experience: "3+ ans" },
-          { name: "Django", level: 75, experience: "2+ ans" },
-          { name: "PostgreSQL", level: 85, experience: "4+ ans" },
-          { name: "MongoDB", level: 80, experience: "3+ ans" },
-          { name: "Redis", level: 70, experience: "2+ ans" }
-        ]
-      },
-      {
-        id: "database",
-        title: "Base de données",
-        icon: Database,
-        color: "primary",
-        position: { x: 0, y: 300 },
-        skills: [
-          { name: "SQL", level: 90, experience: "5+ ans" },
-          { name: "NoSQL", level: 85, experience: "3+ ans" },
-          { name: "Prisma", level: 80, experience: "2+ ans" },
-          { name: "Supabase", level: 85, experience: "2+ ans" }
-        ]
-      },
-      {
-        id: "devops",
-        title: "DevOps",
-        icon: Wrench,
-        color: "accent",
-        position: { x: -212, y: 212 },
-        skills: [
-          { name: "Docker", level: 85, experience: "3+ ans" },
-          { name: "AWS", level: 80, experience: "3+ ans" },
-          { name: "Git", level: 95, experience: "6+ ans" },
-          { name: "CI/CD", level: 75, experience: "2+ ans" },
-          { name: "Webpack", level: 80, experience: "4+ ans" },
-          { name: "Vite", level: 90, experience: "3+ ans" }
-        ]
-      },
-      {
-        id: "mobile",
-        title: "Mobile",
-        icon: Smartphone,
-        color: "secondary",
-        position: { x: -300, y: 0 },
-        skills: [
-          { name: "React Native", level: 85, experience: "3+ ans" },
-          { name: "Expo", level: 80, experience: "2+ ans" },
-          { name: "Flutter", level: 70, experience: "1+ an" }
-        ]
-      },
-      {
-        id: "design",
-        title: "Design",
-        icon: Palette,
-        color: "primary",
-        position: { x: -212, y: -212 },
-        skills: [
-          { name: "Figma", level: 90, experience: "4+ ans" },
-          { name: "Adobe XD", level: 85, experience: "3+ ans" },
-          { name: "Photoshop", level: 80, experience: "5+ ans" },
-          { name: "UI/UX", level: 85, experience: "4+ ans" },
-          { name: "Design System", level: 90, experience: "3+ ans" }
-        ]
-      },
-      {
-        id: "web",
-        title: "Web Technologies",
-        icon: Globe,
-        color: "accent",
-        position: { x: 0, y: -300 },
-        skills: [
-          { name: "HTML5", level: 95, experience: "6+ ans" },
-          { name: "CSS3", level: 95, experience: "6+ ans" },
-          { name: "JavaScript", level: 95, experience: "6+ ans" },
-          { name: "WebGL", level: 70, experience: "1+ an" },
-          { name: "PWA", level: 80, experience: "2+ ans" }
-        ]
-      },
-      {
-        id: "tools",
-        title: "Outils",
-        icon: Wrench,
-        color: "secondary",
-        position: { x: 212, y: -212 },
-        skills: [
-          { name: "VSCode", level: 95, experience: "5+ ans" },
-          { name: "Jest", level: 85, experience: "3+ ans" },
-          { name: "Postman", level: 90, experience: "4+ ans" },
-          { name: "Jira", level: 80, experience: "3+ ans" }
-        ]
-      }
-    ]
-  };
+  branches: [
+    {
+      id: "frontend",
+      title: "Frontend",
+      icon: Code,
+      color: "accent",
+      position: { x: 300, y: 0 },
+      skills: [
+        { name: "React", level: 80, experience: "2 projets" }, // Kasa, Portfolio
+        { name: "Vite", level: 80, experience: "2 projets" }, // Kasa, Portfolio        
+        { name: "SCSS / BEM", level: 90, experience: "1 projet" }, // Kasa
+        { name: "Tailwind CSS", level: 30, experience: "1 projet" }, // Portfolio    
+      ]
+    },
+    {
+      id: "backend",
+      title: "Backend",
+      icon: Server,
+      color: "secondary",
+      position: { x: 212, y: 212 },
+      skills: [
+        { name: "Node.js", level: 75, experience: "2 projets" }, // Mon Vieux Grimoire, Portfolio backend
+        { name: "Express", level: 75, experience: "2 projets" },
+        { name: "MongoDB + Mongoose", level: 70, experience: "1 projet" }, // Mon Vieux Grimoire
+        { name: "Nodemailer / Brevo API", level: 50, experience: "1 projet" } // Portfolio contact
+      ]
+    },
+    {
+      id: "database",
+      title: "Base de données",
+      icon: Database,
+      color: "primary",
+      position: { x: 0, y: 300 },
+      skills: [
+        { name: "MongoDB", level: 80, experience: "1 projet" }, // Mon Vieux Grimoire
+        { name: "SQL (bases théoriques)", level: 30, experience: "cours" } // connaissances mais pas de projet
+      ]
+    },
+    {
+      id: "devops",
+      title: "DevOps",
+      icon: Rocket,
+      color: "accent",
+      position: { x: -212, y: 212 },
+      skills: [
+        { name: "Git / GitHub", level: 90, experience: "6 projets" },
+        { name: "Netlify", level: 75, experience: "2 projets" }, // Mon Vieux Grimoire Portfolio
+        { name: "Railway", level: 70, experience: "2 projets" }, // Mon Vieux Grimoire, Backend portfolio
+        { name: "CI/CD (bases)", level: 60, experience: "6 projets" } // config GitHub Actions
+      ]
+    },
+    {
+      id: "mobile",
+      title: "Accessibilité, SEO & Performance",
+      icon: Eye,
+      color: "secondary",
+      position: { x: -300, y: 0 },
+      skills: [
+        { name: "Chrome DevTools", level: 40, experience: "1 projet" },
+        { name: "Lighthouse", level: 30, experience: "1 projet" },
+        { name: "Meta", level: 80, experience: "1 projet" },
+        { name: "Wave", level: 80, experience: "1 projet" }
+      ]
+    },
+    {
+      id: "design",
+      title: "Design",
+      icon: Palette,
+      color: "primary",
+      position: { x: -212, y: -212 },
+      skills: [
+        { name: "Figma", level: 85, experience: "4 projets" }, // Booki, Kasa, Qwenta, Portfolio
+        { name: "Canva", level: 75, experience: "3 projets" }, // Présentations : Booki, Nina Carducci, Portfolio (charte graphique)
+        { name: "Notion (Kanban)", level: 80, experience: "1 projet" }, // Qwenta, Portfolio
+        { name: "Miro", level: 70, experience: "1 projet" } // Portfolio (mind map)
+      ]
+    },
+    {
+      id: "web",
+      title: "Web Technologies",
+      icon: Globe,
+      color: "accent",
+      position: { x: 0, y: -300 },
+      skills: [
+        { name: "HTML5", level: 90, experience: "6 projets" },
+        { name: "CSS3", level: 90, experience: "6 projets" },
+        { name: "JavaScript", level: 80, experience: "4 projets" } // Booki, Kasa, Mon Vieux Grimoire, Portfolio
+      ]
+    },
+    {
+      id: "tools",
+      title: "Outils",
+      icon: Wrench,
+      color: "secondary",
+      position: { x: 212, y: -212 },
+      skills: [
+        { name: "VSCode", level: 95, experience: "quotidien" },
+        { name: "Postman", level: 85, experience: "3 projets" }, // Mon Vieux Grimoire, Sophie BLUEL, Portfolio backend
+        { name: "Feedly", level: 80, experience: "1 projet" }, // Qwenta
+        { name: "GitHub Projects / Jira", level: 70, experience: "1 projet" } // Qwenta (orga projet)
+      ]
+    }
+  ]
+};
 
   return (
     <section className="px-6">
