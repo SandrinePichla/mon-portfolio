@@ -231,62 +231,61 @@ const SkillsMindMap = () => {
           </div>
 
           {/* Colonne droite : panneau de détails */}
-          <div>
-            {selectedNode ? (
-              <div className="card-elegant p-6 animate-in slide-in-from-bottom duration-300">
-                <div className="flex items-center gap-4 mb-6">
-                  {(() => {
-                    const branch = skillsData.branches.find(b => b.id === selectedNode);
-                    if (!branch) return null;
-                    const IconComponent = branch.icon;
-                    return (
-                      <>
-                        <div 
-                          className="w-12 h-12 rounded-lg flex items-center justify-center"
-                          style={{ backgroundColor: `hsl(var(--${branch.color}))` }}
-                        >
-                          <IconComponent size={24} className="text-background" />
-                        </div>
-                        <h3 className="text-2xl font-display text-primary">{branch.title}</h3>
-                      </>
-                    );
-                  })()}
-                </div>
-
-                <div className="grid md:grid-cols-2 gap-4">
-                  {skillsData.branches
-                    .find(b => b.id === selectedNode)
-                    ?.skills.map((skill, index) => (
-                      <div key={index} className="bg-muted/20 p-4 rounded-lg border border-border">
-                        <div className="flex justify-between items-start mb-2">
-                          <h4 className="font-semibold text-foreground">{skill.name}</h4>
-                          <span className="text-xs text-muted-foreground">{skill.experience}</span>
-                        </div>
-                        
-                        <div className="w-full bg-muted rounded-full h-2 mb-2">
-                          <div 
-                            className="h-2 rounded-full transition-all duration-500"
-                            style={{
-                              width: `${skill.level}%`,
-                              backgroundColor: `hsl(var(--${skillsData.branches.find(b => b.id === selectedNode)?.color}))`
-                            }}
-                          />
-                        </div>
-                        
-                        <span className="text-xs text-muted-foreground">{skill.level}%</span>
-                      </div>
-                    ))}
-                </div>
+<div className="flex items-center justify-center h-[600px]">
+  {selectedNode ? (
+    <div className="card-elegant p-6 w-full">
+      <div className="flex items-center gap-4 mb-6">
+        {(() => {
+          const branch = skillsData.branches.find(b => b.id === selectedNode);
+          if (!branch) return null;
+          const IconComponent = branch.icon;
+          return (
+            <>
+              <div 
+                className="w-12 h-12 rounded-lg flex items-center justify-center"
+                style={{ backgroundColor: `hsl(var(--${branch.color}))` }}
+              >
+                <IconComponent size={24} className="text-background" />
               </div>
-            ) : (
+              <h3 className="text-2xl font-display text-primary">{branch.title}</h3>
+            </>
+          );
+        })()}
+      </div>
+
+      <div className="grid md:grid-cols-2 gap-4">
+        {skillsData.branches
+          .find(b => b.id === selectedNode)
+          ?.skills.map((skill, index) => (
+            <div key={index} className="bg-muted/20 p-4 rounded-lg border border-border">
+              <div className="flex justify-between items-start mb-2">
+                <h4 className="font-semibold text-foreground">{skill.name}</h4>
+                <span className="text-xs text-muted-foreground">{skill.experience}</span>
+              </div>
               
-              <div className="mt-4 text-center lg:text-left">
-              <p className="text-muted-foreground">
-                Cliquez sur les nœuds pour explorer mes compétences en détail
-              </p>
+              <div className="w-full bg-muted rounded-full h-2 mb-2">
+                <div 
+                  className="h-2 rounded-full transition-all duration-500"
+                  style={{
+                    width: `${skill.level}%`,
+                    backgroundColor: `hsl(var(--${skillsData.branches.find(b => b.id === selectedNode)?.color}))`
+                  }}
+                />
+              </div>
+              
+              <span className="text-xs text-muted-foreground">{skill.level}%</span>
             </div>
-            )}
-          </div>
+          ))}
+      </div>
+    </div>
+  ) : (
+    <div className="flex items-center justify-center h-full text-center">
+      <p className="text-muted-foreground italic">
+        Cliquez sur les nœuds pour explorer mes compétences en détail
+      </p>
+    </div>
+  )}
+</div>
         </div>
       </div>
     </section>
