@@ -12,7 +12,7 @@ const PortfolioSection = () => {
   const projects = [
     {
       title: "BOOKI",
-      description: "Développement d'un site Internet qui permette aux usagers de trouver des hébergements et des activités dans la ville de leur choix.",
+      description: "J’ai intégré le site responsive Booki, une plateforme fictive de réservation d’hébergements et d’activités, à partir de maquettes Figma. Ce projet m’a permis d’approfondir mes compétences en HTML sémantique, CSS responsive et gestion de version avec Git/GitHub, ",
       image: project1,
       technologies: ["HTML", "CSS", "Figma", "Github"],
       liveLink: "https://sandrinepichla.github.io/booki-starter-code/",
@@ -20,9 +20,9 @@ const PortfolioSection = () => {
     },
     {
       title: "Sophie BLUEL Architecte d'interieur",
-      description: "En tant que développeur front-end, je viens en renfort d’une équipe qui travaille sur la conception du site portfolio d’une architecte d’intérieur.",
+      description: "En tant que développeur front-end, je suis venue en renfort d’une équipe qui travaille sur la conception du site portfolio d’une architecte d’intérieur.. Ma mission a été de développer des fonctionnalités dynamiques en JavaScript : galerie de projets, authentification administrateur, et modale d’upload d’images",
       image: project2,
-      technologies: ["JavaScript"],
+      technologies: ["JavaScript", "Kanban", "API Rest"],
       liveLink: "https://sandrinepichla.github.io/Portfolio-architecte-sophie-bluel-master/FrontEnd/",
       githubLink: "https://github.com/SandrinePichla/Portfolio-architecte-sophie-bluel-master "
     },
@@ -36,7 +36,7 @@ const PortfolioSection = () => {
     },
     {
       title: "Kasa",
-      description: "Développement d'un site Internet qui permette aux usagers de trouver des hébergements et des activités dans la ville de leur choix.",
+      description: "J’ai participé à la refonte du site de Kasa, une plateforme de location d’hébergements, en développant toute l’interface utilisateur en React à partir de maquettes Figma responsives. Mon travail a inclus la mise en place des composants dynamiques, du routing, des animations CSS et du style via SASS, pour un rendu fidèle, accessible et fluide.",
       image: project4,
       technologies: ["React", "React Router", "SASS ", "BEM"],
       liveLink: "https://sandrinepichla.github.io/kasa/",
@@ -44,23 +44,23 @@ const PortfolioSection = () => {
     },
     {
       title: "Mon vieux grimoire",
-      description: "Développement d'un site Internet qui permette aux usagers de trouver des hébergements et des activités dans la ville de leur choix.",
+      description: "J’ai développé l’API complète du site Mon Vieux Grimoire, une plateforme de notation de livres. À partir des spécifications techniques fournies, j’ai conçu un back-end sécurisé et performant en Node.js, avec gestion des utilisateurs, des livres et des notes, ainsi qu’un système d’optimisation automatique des images uploadées.",
       image: project5,
-      technologies: ["HTML", "CSS", "Github", "MongoDB"],
+      technologies: ["Node.js / Express ", "MongoDB", "Bcrypt", "Postman"],
       liveLink: "https://flourishing-kitsune-ca5c55.netlify.app/",
       githubLink: "https://github.com/SandrinePichla/mon_vieux_grimoire "
     },
     {
       title: "Qwenta",
-      description: "Développement d'un site Internet qui permette aux usagers de trouver des hébergements et des activités dans la ville de leur choix.",
+      description: "J’ai pris en charge la gestion de projet du site Menu Maker pour le client Qwenta, un outil destiné aux restaurateurs pour créer leurs menus en ligne. En l’absence du Product Owner, j’ai rédigé l’ensemble des spécifications techniques (analyse de la maquette Figma), structuré un Kanban complet dans Notion, et mis en place une veille technologique ciblée pour orienter les choix de stack. Ce projet m’a permis d’endosser un rôle de chef de projet digital en autonomie.",
       image: project6,
-      technologies: ["HTML", "CSS", "Github", "MongoDB"],          
+      technologies: ["Notion", "Feedly", "Agile/Scrum"],          
     },
     {
       title: "Mon Portfolio",
-      description: "Développement d'un site Internet qui permette aux usagers de trouver des hébergements et des activités dans la ville de leur choix.",
+      description: "J’ai conçu et développé mon portfolio professionnel en ligne, un site web full stack léger destiné à présenter mon profil de développeuse, mes compétences et mes projets. Ce projet m’a permis de travailler la mise en page et le styling côté front-end, tout en intégrant une partie back-end simple pour gérer le formulaire de contact. J’ai ainsi pu valoriser mon autonomie, ma capacité à relier un front statique à un service backend, et à livrer un produit responsive et accessible.",
       image: project7,
-      technologies: ["HTML", "CSS", "Github", "MongoDB"],
+      technologies: ["React", "Vite", "CSS", "Node.js/Express", "Netlify", "Railway"],
       liveLink: "https://sandrinepichla.github.io/mon-portfolio/",
       githubLink: "https://github.com/SandrinePichla/mon-portfolio "
     },
