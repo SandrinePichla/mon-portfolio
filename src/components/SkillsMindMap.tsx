@@ -3,6 +3,27 @@ import { Brain, Code, Database, Palette, Server, Globe, Smartphone, Wrench } fro
 
 const SkillsMindMap = () => {
   const [selectedNode, setSelectedNode] = useState<string | null>(null);
+  const containerRef = useRef<HTMLDivElement | null>(null);
+
+  // Centre calculé dynamiquement
+  const [center, setCenter] = useState({ x: 0, y: 0 });
+
+  useEffect(() => {
+    const updateCenter = () => {
+      if (containerRef.current) {
+        const rect = containerRef.current.getBoundingClientRect();
+        setCenter({
+          x: rect.width / 2,
+          y: rect.height / 2,
+        });
+      }
+    };
+
+    updateCenter();
+    window.addEventListener("resize", updateCenter);
+
+    return () => window.removeEventListener("resize", updateCenter);
+  }, []);
 
   const skillsData = {
     center: {
@@ -127,133 +148,145 @@ const SkillsMindMap = () => {
     ]
   };
 
-  const centerX = 400;
-  const centerY = 300;
-
   return (
     <section className="py-20 px-6">
       <div className="max-w-7xl mx-auto">
         <h2 className="text-4xl font-display gradient-text mb-12 text-center">
           Mind Map des Compétences
         </h2>
-        
-        <div className="relative w-full h-[600px] bg-muted/5 rounded-2xl border border-border overflow-hidden">
-          {/* SVG Lines */}
-          <svg className="absolute inset-0 w-full h-full pointer-events-none" style={{ zIndex: 1 }}>
-            {skillsData.branches.map((branch) => (
-              <line
-                key={branch.id}
-                x1={centerX}
-                y1={centerY}
-                x2={centerX + branch.position.x / 2}
-                y2={centerY + branch.position.y / 2}
-                stroke={`hsl(var(--${branch.color}))`}
-                strokeWidth="2"
-                strokeDasharray={selectedNode === branch.id ? "0" : "5,5"}
-                className="transition-all duration-300"
-                opacity={selectedNode && selectedNode !== branch.id ? 0.3 : 0.7}
-              />
-            ))}
-          </svg>
 
-          {/* Center Node */}
-          <div 
-            className="absolute transform -translate-x-1/2 -translate-y-1/2 z-10"
-            style={{ left: centerX, top: centerY }}
-          >
-            <div className="w-24 h-24 bg-gradient-primary rounded-full flex items-center justify-center shadow-elegant cursor-pointer hover:scale-110 transition-all duration-300">
-              <skillsData.center.icon size={32} className="text-primary-foreground" />
-            </div>
-            <div className="absolute top-full mt-2 left-1/2 transform -translate-x-1/2 whitespace-nowrap">
-              <span className="text-sm font-semibold text-foreground">{skillsData.center.title}</span>
-            </div>
-          </div>
+        {/* Layout en 2 colonnes */}
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+          
+          {/* Colonne gauche : mind map */}
+          <div>
+            <div
+              ref={containerRef}
+              className="relative w-full h-[600px] bg-muted/5 rounded-2xl border border-border overflow-hidden"
+            >
+              {/* Lignes */}
+              <svg className="absolute inset-0 w-full h-full pointer-events-none" style={{ zIndex: 1 }}>
+                {skillsData.branches.map((branch) => (
+                  <line
+                    key={branch.id}
+                    x1={center.x}
+                    y1={center.y}
+                    x2={center.x + branch.position.x / 2}
+                    y2={center.y + branch.position.y / 2}
+                    stroke={`hsl(var(--${branch.color}))`}
+                    strokeWidth="2"
+                    strokeDasharray={selectedNode === branch.id ? "0" : "5,5"}
+                    className="transition-all duration-300"
+                    opacity={selectedNode && selectedNode !== branch.id ? 0.3 : 0.7}
+                  />
+                ))}
+              </svg>
 
-          {/* Branch Nodes */}
-          {skillsData.branches.map((branch) => {
-            const IconComponent = branch.icon;
-            return (
+              {/* Nœud central */}
               <div
-                key={branch.id}
                 className="absolute transform -translate-x-1/2 -translate-y-1/2 z-10"
-                style={{ 
-                  left: centerX + branch.position.x / 2, 
-                  top: centerY + branch.position.y / 2 
-                }}
+                style={{ left: center.x, top: center.y }}
               >
-                <div 
-                  className={`w-16 h-16 rounded-full flex items-center justify-center shadow-card cursor-pointer hover:scale-110 transition-all duration-300 ${
-                    selectedNode === branch.id ? 'ring-4 ring-primary shadow-elegant' : ''
-                  }`}
-                  style={{
-                    backgroundColor: `hsl(var(--${branch.color}))`,
-                    opacity: selectedNode && selectedNode !== branch.id ? 0.5 : 1
-                  }}
-                  onClick={() => setSelectedNode(selectedNode === branch.id ? null : branch.id)}
-                >
-                  <IconComponent size={24} className="text-background" />
+                <div className="w-24 h-24 bg-gradient-primary rounded-full flex items-center justify-center shadow-elegant cursor-pointer hover:scale-110 transition-all duration-300">
+                  <skillsData.center.icon size={32} className="text-primary-foreground" />
                 </div>
                 <div className="absolute top-full mt-2 left-1/2 transform -translate-x-1/2 whitespace-nowrap">
-                  <span className="text-xs font-medium text-muted-foreground">{branch.title}</span>
+                  <span className="text-sm font-semibold text-foreground">{skillsData.center.title}</span>
                 </div>
               </div>
-            );
-          })}
-        </div>
 
-        {/* Skills Detail Panel */}
-        {selectedNode && (
-          <div className="mt-8 card-elegant p-6 animate-in slide-in-from-bottom duration-300">
-            <div className="flex items-center gap-4 mb-6">
-              {(() => {
-                const branch = skillsData.branches.find(b => b.id === selectedNode);
-                if (!branch) return null;
+              {/* Branches */}
+              {skillsData.branches.map((branch) => {
                 const IconComponent = branch.icon;
                 return (
-                  <>
-                    <div 
-                      className="w-12 h-12 rounded-lg flex items-center justify-center"
-                      style={{ backgroundColor: `hsl(var(--${branch.color}))` }}
+                  <div
+                    key={branch.id}
+                    className="absolute transform -translate-x-1/2 -translate-y-1/2 z-10"
+                    style={{
+                      left: center.x + branch.position.x / 2,
+                      top: center.y + branch.position.y / 2
+                    }}
+                  >
+                    <div
+                      className={`w-16 h-16 rounded-full flex items-center justify-center shadow-card cursor-pointer hover:scale-110 transition-all duration-300 ${
+                        selectedNode === branch.id ? "ring-4 ring-primary shadow-elegant" : ""
+                      }`}
+                      style={{
+                        backgroundColor: `hsl(var(--${branch.color}))`,
+                        opacity: selectedNode && selectedNode !== branch.id ? 0.5 : 1
+                      }}
+                      onClick={() =>
+                        setSelectedNode(selectedNode === branch.id ? null : branch.id)
+                      }
                     >
                       <IconComponent size={24} className="text-background" />
                     </div>
-                    <h3 className="text-2xl font-display text-primary">{branch.title}</h3>
-                  </>
-                );
-              })()}
-            </div>
-
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4">
-              {skillsData.branches
-                .find(b => b.id === selectedNode)
-                ?.skills.map((skill, index) => (
-                  <div key={index} className="bg-muted/20 p-4 rounded-lg border border-border">
-                    <div className="flex justify-between items-start mb-2">
-                      <h4 className="font-semibold text-foreground">{skill.name}</h4>
-                      <span className="text-xs text-muted-foreground">{skill.experience}</span>
+                    <div className="absolute top-full mt-2 left-1/2 transform -translate-x-1/2 whitespace-nowrap">
+                      <span className="text-xs font-medium text-muted-foreground">{branch.title}</span>
                     </div>
-                    
-                    <div className="w-full bg-muted rounded-full h-2 mb-2">
-                      <div 
-                        className="h-2 rounded-full transition-all duration-500"
-                        style={{
-                          width: `${skill.level}%`,
-                          backgroundColor: `hsl(var(--${skillsData.branches.find(b => b.id === selectedNode)?.color}))`
-                        }}
-                      />
-                    </div>
-                    
-                    <span className="text-xs text-muted-foreground">{skill.level}%</span>
                   </div>
-                ))}
-            </div>
+                );
+              })}
+            </div>            
           </div>
-        )}
 
-        <div className="mt-8 text-center">
-          <p className="text-muted-foreground">
-            Cliquez sur les nœuds pour explorer mes compétences en détail
-          </p>
+          {/* Colonne droite : panneau de détails */}
+          <div>
+            {selectedNode ? (
+              <div className="card-elegant p-6 animate-in slide-in-from-bottom duration-300">
+                <div className="flex items-center gap-4 mb-6">
+                  {(() => {
+                    const branch = skillsData.branches.find(b => b.id === selectedNode);
+                    if (!branch) return null;
+                    const IconComponent = branch.icon;
+                    return (
+                      <>
+                        <div 
+                          className="w-12 h-12 rounded-lg flex items-center justify-center"
+                          style={{ backgroundColor: `hsl(var(--${branch.color}))` }}
+                        >
+                          <IconComponent size={24} className="text-background" />
+                        </div>
+                        <h3 className="text-2xl font-display text-primary">{branch.title}</h3>
+                      </>
+                    );
+                  })()}
+                </div>
+
+                <div className="grid md:grid-cols-2 gap-4">
+                  {skillsData.branches
+                    .find(b => b.id === selectedNode)
+                    ?.skills.map((skill, index) => (
+                      <div key={index} className="bg-muted/20 p-4 rounded-lg border border-border">
+                        <div className="flex justify-between items-start mb-2">
+                          <h4 className="font-semibold text-foreground">{skill.name}</h4>
+                          <span className="text-xs text-muted-foreground">{skill.experience}</span>
+                        </div>
+                        
+                        <div className="w-full bg-muted rounded-full h-2 mb-2">
+                          <div 
+                            className="h-2 rounded-full transition-all duration-500"
+                            style={{
+                              width: `${skill.level}%`,
+                              backgroundColor: `hsl(var(--${skillsData.branches.find(b => b.id === selectedNode)?.color}))`
+                            }}
+                          />
+                        </div>
+                        
+                        <span className="text-xs text-muted-foreground">{skill.level}%</span>
+                      </div>
+                    ))}
+                </div>
+              </div>
+            ) : (
+              
+              <div className="mt-4 text-center lg:text-left">
+              <p className="text-muted-foreground">
+                Cliquez sur les nœuds pour explorer mes compétences en détail
+              </p>
+            </div>
+            )}
+          </div>
         </div>
       </div>
     </section>
