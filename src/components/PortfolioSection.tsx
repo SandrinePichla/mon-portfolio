@@ -54,7 +54,9 @@ const PortfolioSection = () => {
       title: "Qwenta",
       description: "J’ai pris en charge la gestion de projet du site Menu Maker pour le client Qwenta, un outil destiné aux restaurateurs pour créer leurs menus en ligne. En l’absence du Product Owner, j’ai rédigé l’ensemble des spécifications techniques (analyse de la maquette Figma), structuré un Kanban complet dans Notion, et mis en place une veille technologique ciblée pour orienter les choix de stack. Ce projet m’a permis d’endosser un rôle de chef de projet digital en autonomie.",
       image: project6,
-      technologies: ["Notion", "Feedly", "Agile/Scrum"],          
+      technologies: ["Notion", "Feedly", "Agile/Scrum"],        
+      liveLink: "",
+      githubLink: ""  
     },
     {
       title: "Mon Portfolio",
@@ -104,21 +106,45 @@ const PortfolioSection = () => {
                 </div>
 
                 <div className="flex flex-col sm:flex-row gap-3">
-                  <a
-                    href={project.liveLink}
-                    className="flex items-center justify-center gap-2 px-4 py-2 bg-gradient-primary rounded-lg text-primary-foreground font-medium hover:shadow-elegant transition-all duration-300 text-sm md:text-base"
-                  >
-                    <ExternalLink size={16} />
-                    Voir le projet
-                  </a>
-                  
-                  <a
-                    href={project.githubLink}
-                    className="flex items-center justify-center gap-2 px-4 py-2 bg-card border border-border rounded-lg font-medium hover:shadow-card transition-all duration-300 text-sm md:text-base"
-                  >
-                    <Github size={16} />
-                    Code source
-                  </a>
+                  {project.liveLink ? (
+                    <a
+                      href={project.liveLink}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="flex items-center justify-center gap-2 px-4 py-2 bg-gradient-primary rounded-lg text-primary-foreground font-medium hover:shadow-elegant transition-all duration-300 text-sm md:text-base"
+                    >
+                      <ExternalLink size={16} />
+                      Voir le projet
+                    </a>
+                  ) : (
+                    <button
+                      disabled
+                      className="flex items-center justify-center gap-2 px-4 py-2 bg-muted text-muted-foreground rounded-lg font-medium opacity-50 cursor-not-allowed text-sm md:text-base"
+                    >
+                      <ExternalLink size={16} />
+                      Démo non dispo
+                    </button>
+                  )}
+
+                  {project.githubLink ? (
+                    <a
+                      href={project.githubLink}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="flex items-center justify-center gap-2 px-4 py-2 bg-card border border-border rounded-lg font-medium hover:shadow-card transition-all duration-300 text-sm md:text-base"
+                    >
+                      <Github size={16} />
+                      Code source
+                    </a>
+                  ) : (
+                    <button
+                      disabled
+                      className="flex items-center justify-center gap-2 px-4 py-2 bg-muted text-muted-foreground rounded-lg font-medium opacity-50 cursor-not-allowed text-sm md:text-base"
+                    >
+                      <Github size={16} />
+                      Code non dispo
+                    </button>
+                  )}
                 </div>
               </div>
             </div>
