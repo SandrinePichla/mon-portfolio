@@ -70,7 +70,7 @@ const PortfolioSection = () => {
   ];
 
   return (
-    <section className="py-20 px-6 bg-muted/20">
+    <section className="px-6 bg-muted/20">
       <div className="max-w-6xl mx-auto">
         <h2 className="text-4xl font-display gradient-text mb-12 text-center">Projets</h2>
         <p className="text-lg text-muted-foreground text-center mb-16 max-w-2xl mx-auto">
@@ -80,12 +80,12 @@ const PortfolioSection = () => {
         <div className="grid md:grid-cols-1 lg:grid-cols-2 gap-8">
           {projects.map((project, index) => (
             <div key={index} className="project-card group">
-              <div className="aspect-video overflow-hidden">
+              <div className="relative w-full h-72 rounded-xl overflow-hidden border-4 border-primary shadow-lg shadow-primary/50 flex items-center justify-center bg-background">
                 <img
                   src={project.image}
                   alt={project.title}
-                  className="project-image w-full h-full object-cover"
-                />
+                  className="max-h-[85%] max-w-[90%] object-contain rounded-lg"
+                />                
               </div>
               
               <div className="p-6 md:p-8">

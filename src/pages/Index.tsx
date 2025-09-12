@@ -53,23 +53,23 @@ const Index = () => {
 
       {/* Main Content */}
       <main className="md:ml-64">
-        <section id="home">
+        <section id="home" className="py-12">
           <HeroSection onScrollToPortfolio={() => scrollToSection('portfolio')} />
         </section>
 
-        <section id="about">
+        <section id="about" className="py-12">
           <AboutSection />
         </section>
         
-        <section id="mindmap">
+        <section id="mindmap" className="py-12">
           <SkillsMindMap />
         </section>
 
-        <section id="portfolio">
+        <section id="portfolio" className="py-12">
           <PortfolioSection />
         </section>
 
-        <section id="contact">
+        <section id="contact" className="py-12">
           <ContactSection />
         </section>
       </main>
