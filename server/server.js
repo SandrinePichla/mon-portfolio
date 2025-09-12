@@ -1,6 +1,6 @@
 const cors = require('cors');
 
-// Autoriser ton domaine Netlify
+// Autoriser Netlify
 app.use(cors({
   origin: "https://taupe-lollipop-8d4dc7.netlify.app", 
   methods: ["GET", "POST"],
