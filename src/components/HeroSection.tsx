@@ -26,7 +26,7 @@ const HeroSection = ({ onScrollToPortfolio }: HeroSectionProps) => {
         </h1>
 
         <p className="text-lg sm:text-xl md:text-2xl text-muted-foreground mb-4">
-          Développeur Full Stack
+          Développeuse Full Stack
         </p>
         
         <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8 px-4">
