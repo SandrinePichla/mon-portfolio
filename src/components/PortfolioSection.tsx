@@ -20,51 +20,49 @@ const PortfolioSection = () => {
     },
     {
       title: "Sophie BLUEL Architecte d'interieur",
-      description: "En tant que développeur front-end pour l’agence ArchiWebos, je viens en renfort d’une équipe qui travaille sur la conception du site portfolio d’une architecte d’intérieur.",
+      description: "En tant que développeur front-end, je viens en renfort d’une équipe qui travaille sur la conception du site portfolio d’une architecte d’intérieur.",
       image: project2,
       technologies: ["JavaScript"],
-      liveLink: "#",
-      githubLink: "#"
+      liveLink: "https://sandrinepichla.github.io/Portfolio-architecte-sophie-bluel-master/FrontEnd/",
+      githubLink: "https://github.com/SandrinePichla/Portfolio-architecte-sophie-bluel-master "
     },
     {
       title: "Nina Carducci - photographe",
       description: "Développeur freelance, j’ai accompagné Nina Carducci dans l’optimisation complète de son site vitrine, en améliorant ses performances, son référencement (SEO local et global), son accessibilité, et en corrigeant plusieurs bugs pour garantir une expérience utilisateur fluide et moderne. .",
       image: project3,
       technologies: ["Chrome DevTools", "SEO", "Wave", "Meta"],
-      liveLink: "https://sandrinepichla.github.io/booki-starter-code/",
-      githubLink: "https://github.com/SandrinePichla/booki-starter-code"
+      liveLink: "https://sandrinepichla.github.io/Nina-Carducci-Dev-master/",
+      githubLink: "https://github.com/SandrinePichla/Nina-Carducci-Dev-master"
     },
     {
       title: "Kasa",
       description: "Développement d'un site Internet qui permette aux usagers de trouver des hébergements et des activités dans la ville de leur choix.",
       image: project4,
-      technologies: ["HTML", "CSS", "Github", "MongoDB"],
-      liveLink: "https://sandrinepichla.github.io/booki-starter-code/",
-      githubLink: "https://github.com/SandrinePichla/booki-starter-code"
+      technologies: ["React", "React Router", "SASS ", "BEM"],
+      liveLink: "https://sandrinepichla.github.io/kasa/",
+      githubLink: "https://github.com/SandrinePichla/kasa"
     },
     {
       title: "Mon vieux grimoire",
       description: "Développement d'un site Internet qui permette aux usagers de trouver des hébergements et des activités dans la ville de leur choix.",
       image: project5,
       technologies: ["HTML", "CSS", "Github", "MongoDB"],
-      liveLink: "https://sandrinepichla.github.io/booki-starter-code/",
-      githubLink: "https://github.com/SandrinePichla/booki-starter-code"
+      liveLink: "https://flourishing-kitsune-ca5c55.netlify.app/",
+      githubLink: "https://github.com/SandrinePichla/mon_vieux_grimoire "
     },
     {
       title: "Qwenta",
       description: "Développement d'un site Internet qui permette aux usagers de trouver des hébergements et des activités dans la ville de leur choix.",
       image: project6,
-      technologies: ["HTML", "CSS", "Github", "MongoDB"],
-      liveLink: "https://sandrinepichla.github.io/booki-starter-code/",
-      githubLink: "https://github.com/SandrinePichla/booki-starter-code"
+      technologies: ["HTML", "CSS", "Github", "MongoDB"],          
     },
     {
       title: "Mon Portfolio",
       description: "Développement d'un site Internet qui permette aux usagers de trouver des hébergements et des activités dans la ville de leur choix.",
       image: project7,
       technologies: ["HTML", "CSS", "Github", "MongoDB"],
-      liveLink: "https://sandrinepichla.github.io/booki-starter-code/",
-      githubLink: "https://github.com/SandrinePichla/booki-starter-code"
+      liveLink: "https://sandrinepichla.github.io/mon-portfolio/",
+      githubLink: "https://github.com/SandrinePichla/mon-portfolio "
     },
 
   ];
