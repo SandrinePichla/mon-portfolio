@@ -20,8 +20,8 @@ router.post('/', async (req, res) => {
     });
 
     await transporter.sendMail({
-      from: process.env.EMAIL_USER, // Changé : utiliser EMAIL_USER comme expéditeur
-      replyTo: email, // Ajouté : permet de répondre directement à l'utilisateur
+      from: process.env.EMAIL_USER, 
+      replyTo: email, 
       to: process.env.EMAIL_USER,
       subject: `Contact Portfolio: ${subject}`,
       html: `
