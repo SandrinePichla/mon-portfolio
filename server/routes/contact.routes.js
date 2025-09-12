@@ -1,4 +1,4 @@
-import express from 'express';
+ const express = require('express');
 import nodemailer from 'nodemailer';
 
 const router = express.Router();
