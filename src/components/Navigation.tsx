@@ -34,8 +34,7 @@ const Navigation = ({ activeSection, onSectionChange }: NavigationProps) => {
         ${isMobileOpen ? 'translate-x-0' : '-translate-x-full'}
         md:translate-x-0
       `}>
-        <div className="p-6">
-          <h2 className="text-2xl font-display gradient-text mb-8">Projets</h2>
+        <div className="p-6">        
           
           <ul className="space-y-2">
             {navItems.map(({ id, label, icon: Icon }) => (
