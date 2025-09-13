@@ -66,8 +66,7 @@ const SkillsMindMap = () => {
       position: { x: 212, y: 212 },
       skills: [
         { name: "Node.js", level: 75, experience: "2 projets" }, // Mon Vieux Grimoire, Portfolio backend
-        { name: "Express", level: 75, experience: "2 projets" },
-        { name: "MongoDB + Mongoose", level: 70, experience: "1 projet" }, // Mon Vieux Grimoire
+        { name: "Express", level: 75, experience: "2 projets" },       
         { name: "Nodemailer / Brevo API", level: 50, experience: "1 projet" } // Portfolio contact
       ]
     },
@@ -78,7 +77,7 @@ const SkillsMindMap = () => {
       color: "primary",
       position: { x: 0, y: 300 },
       skills: [
-        { name: "MongoDB", level: 80, experience: "1 projet" }, // Mon Vieux Grimoire
+         { name: "MongoDB", level: 80, experience: "1 projet" }, // Mon Vieux Grimoire
         { name: "SQL (bases théoriques)", level: 30, experience: "cours" } // connaissances mais pas de projet
       ]
     },
@@ -142,8 +141,7 @@ const SkillsMindMap = () => {
       skills: [
         { name: "VSCode", level: 95, experience: "quotidien" },
         { name: "Postman", level: 85, experience: "3 projets" }, // Mon Vieux Grimoire, Sophie BLUEL, Portfolio backend
-        { name: "Feedly", level: 80, experience: "1 projet" }, // Qwenta
-        { name: "GitHub Projects / Jira", level: 70, experience: "1 projet" } // Qwenta (orga projet)
+        { name: "Feedly", level: 80, experience: "1 projet" }, // Qwenta        
       ]
     }
   ]

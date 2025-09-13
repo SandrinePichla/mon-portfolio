@@ -19,7 +19,7 @@ const CV = () => {
         <div className="mt-6 flex justify-center flex-wrap gap-6 text-sm text-muted-foreground">
           <span>📍 48 rue des Ecumines 69210 SAINT-PIERRE-LA-PALUD</span>
           <span>📞 06.72.75.81.48</span>
-          <span>✉️ sandrinepichl@hotmail.com</span>
+          <span>✉️ sandrinepichla@hotmail.com</span>
         </div>
       </div>
 
@@ -60,8 +60,9 @@ const CV = () => {
           <ul className="space-y-2 text-muted-foreground">
             <li>HTML / CSS : +++</li>
             <li>JavaScript : ++</li>
-            <li>React : ++</li>
-            <li>Node.js / Express : ++</li>
+            <li>React / Vite: +++</li>
+            <li>Node.js / Express : +++</li>
+            <li>MongoDB : +++</li>
             <li>PHP : +</li>
           </ul>
         </div>
@@ -74,8 +75,10 @@ const CV = () => {
           <ul className="space-y-2 text-muted-foreground">
             <li>Logiciels bureautiques : +++</li>
             <li>Photoshop : +++</li>
-            <li>Figma : ++</li>
-            <li>VSCode : ++</li>
+            <li>Figma : +++</li>
+            <li>VSCode : +++</li>
+            <li>Postman : ++</li>
+            <li>Git / GitHub : ++</li>
           </ul>
         </div>
 
@@ -86,8 +89,9 @@ const CV = () => {
           </h3>
           <ul className="space-y-2 text-muted-foreground">
             <li>Responsive Design : ++</li>
+            <li>SEO / Accessibilité : +++</li>
             <li>BEM / SCSS : ++</li>
-            <li>Git : ++</li>
+            <li>Agile / Scrum : ++</li>
             <li>CI/CD (bases) : +</li>
           </ul>
         </div>
