@@ -79,7 +79,7 @@ const PortfolioSection = () => {
         
         <div className="grid md:grid-cols-1 lg:grid-cols-2 gap-8">
           {projects.map((project, index) => (
-            <div key={index} className="project-card group">
+            <div key={index} className="project-card group cursor-default">
               <div className="relative w-full h-72 rounded-xl overflow-hidden border-4 border-primary shadow-lg shadow-primary/50 flex items-center justify-center bg-background">
                 <img
                   src={project.image}
