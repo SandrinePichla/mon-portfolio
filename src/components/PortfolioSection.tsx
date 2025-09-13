@@ -15,6 +15,10 @@ const PortfolioSection = () => {
       description: "J’ai intégré le site responsive Booki, une plateforme fictive de réservation d’hébergements et d’activités, à partir de maquettes Figma. Ce projet m’a permis d’approfondir mes compétences en HTML sémantique, CSS responsive et gestion de version avec Git/GitHub, ",
       image: project1,
       technologies: ["HTML", "CSS", "Figma", "Github"],
+      challenges: [
+      "Comprendre et appliquer le HTML sémantique pour améliorer l’accessibilité",
+      "Mettre en place un CSS responsive fidèle aux maquettes Figma"
+      ],
       liveLink: "https://sandrinepichla.github.io/booki-starter-code/",
       githubLink: "https://github.com/SandrinePichla/booki-starter-code"
     },
@@ -23,6 +27,11 @@ const PortfolioSection = () => {
       description: "En tant que développeur front-end, je suis venue en renfort d’une équipe qui travaille sur la conception du site portfolio d’une architecte d’intérieur.. Ma mission a été de développer des fonctionnalités dynamiques en JavaScript : galerie de projets, authentification administrateur, et modale d’upload d’images",
       image: project2,
       technologies: ["JavaScript", "Kanban", "API Rest"],
+      challenges: [
+      "Gérer l’authentification administrateur en JavaScript",
+      "Implémenter une modale avec upload d’images et validation",
+      "Communiquer avec une API Rest"
+      ],
       liveLink: "https://sandrinepichla.github.io/Portfolio-architecte-sophie-bluel-master/FrontEnd/",
       githubLink: "https://github.com/SandrinePichla/Portfolio-architecte-sophie-bluel-master "
     },
@@ -31,6 +40,10 @@ const PortfolioSection = () => {
       description: "Développeur freelance, j’ai accompagné Nina Carducci dans l’optimisation complète de son site vitrine, en améliorant ses performances, son référencement (SEO local et global), son accessibilité, et en corrigeant plusieurs bugs pour garantir une expérience utilisateur fluide et moderne. .",
       image: project3,
       technologies: ["Chrome DevTools", "SEO", "Wave", "Meta"],
+      challenges: [
+      "Améliorer les performances avec Lighthouse et Wave (SEO, accessibilité, temps de chargement)",
+      "Corriger des bugs liés aux intégrations existantes tout en maintenant la compatibilité"
+      ],
       liveLink: "https://sandrinepichla.github.io/Nina-Carducci-Dev-master/",
       githubLink: "https://github.com/SandrinePichla/Nina-Carducci-Dev-master"
     },
@@ -39,6 +52,11 @@ const PortfolioSection = () => {
       description: "J’ai participé à la refonte du site de Kasa, une plateforme de location d’hébergements, en développant toute l’interface utilisateur en React à partir de maquettes Figma responsives. Mon travail a inclus la mise en place des composants dynamiques, du routing, des animations CSS et du style via SASS, pour un rendu fidèle, accessible et fluide.",
       image: project4,
       technologies: ["React", "React Router", "SASS ", "BEM"],
+      challenges: [
+      "Structurer l’application en composants React réutilisables",
+      "Mettre en place React Router et gérer les routes dynamiques",
+      "Appliquer la méthodologie BEM avec SASS pour un style maintenable"
+      ],
       liveLink: "https://sandrinepichla.github.io/kasa/",
       githubLink: "https://github.com/SandrinePichla/kasa"
     },
@@ -47,6 +65,11 @@ const PortfolioSection = () => {
       description: "J’ai développé l’API complète du site Mon Vieux Grimoire, une plateforme de notation de livres. À partir des spécifications techniques fournies, j’ai conçu un back-end sécurisé et performant en Node.js, avec gestion des utilisateurs, des livres et des notes, ainsi qu’un système d’optimisation automatique des images uploadées.",
       image: project5,
       technologies: ["Node.js / Express ", "MongoDB", "Bcrypt", "Postman"],
+      challenges: [
+      "Concevoir une API REST sécurisée avec gestion d’authentification par JWT",
+      "Optimiser les images uploadées automatiquement avec Sharp",
+      "Gérer les erreurs et la validation des données côté serveur"
+      ],
       liveLink: "https://flourishing-kitsune-ca5c55.netlify.app/",
       githubLink: "https://github.com/SandrinePichla/mon_vieux_grimoire "
     },
@@ -54,7 +77,12 @@ const PortfolioSection = () => {
       title: "Qwenta",
       description: "J’ai pris en charge la gestion de projet du site Menu Maker pour le client Qwenta, un outil destiné aux restaurateurs pour créer leurs menus en ligne. En l’absence du Product Owner, j’ai rédigé l’ensemble des spécifications techniques (analyse de la maquette Figma), structuré un Kanban complet dans Notion, et mis en place une veille technologique ciblée pour orienter les choix de stack. Ce projet m’a permis d’endosser un rôle de chef de projet digital en autonomie.",
       image: project6,
-      technologies: ["Notion", "Feedly", "Agile/Scrum"],        
+      technologies: ["Notion", "Feedly", "Agile/Scrum"],
+      challenges: [
+      "Analyser une maquette complexe et rédiger les spécifications techniques",
+      "Mettre en place un Kanban dans Notion pour gérer le projet en mode Agile",
+      "Faire une veille technologique pertinente pour orienter le choix de la stack"
+      ],  
       liveLink: "",
       githubLink: ""  
     },
@@ -63,6 +91,12 @@ const PortfolioSection = () => {
       description: "J’ai conçu et développé mon portfolio professionnel en ligne, un site web full stack léger destiné à présenter mon profil de développeuse, mes compétences et mes projets. Ce projet m’a permis de travailler la mise en page et le styling côté front-end, tout en intégrant une partie back-end simple pour gérer le formulaire de contact. J’ai ainsi pu valoriser mon autonomie, ma capacité à relier un front statique à un service backend, et à livrer un produit responsive et accessible.",
       image: project7,
       technologies: ["React", "Vite", "CSS", "Node.js/Express", "Netlify", "Railway"],
+      challenges: [
+      "Concevoir un site full-stack déployé sur Netlify et Railway",
+      "Améliorer le SEO et l’accessibilité (Wave, Lighthouse, balises meta)",
+      "Mettre en place un formulaire de contact avec envoi d’e-mails côté back-end",
+      "Garantir la qualité du code et la conformité du site (ESLint, validation W3C HTML/CSS)"
+      ],
       liveLink: "https://sandrinepichla.github.io/mon-portfolio/",
       githubLink: "https://github.com/SandrinePichla/mon-portfolio "
     },
@@ -96,6 +130,18 @@ const PortfolioSection = () => {
                 <p className="text-muted-foreground mb-6 leading-relaxed text-sm md:text-base">
                   {project.description}
                 </p>
+
+                {/* Problématiques rencontrées */}
+                {project.challenges && project.challenges.length > 0 && (
+                  <div className="mb-4">
+                    <h4 className="text-sm font-semibold mb-2">Problématiques rencontrées :</h4>
+                    <ul className="list-disc list-inside text-sm text-muted-foreground">
+                      {project.challenges.map((challenge, i) => (
+                        <li key={i}>{challenge}</li>
+                      ))}
+                    </ul>
+                  </div>
+                )}
 
                 <div className="flex flex-wrap gap-2 mb-6">
                   {project.technologies.map((tech) => (
