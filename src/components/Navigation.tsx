@@ -23,6 +23,9 @@ const Navigation = ({ activeSection, onSectionChange }: NavigationProps) => {
       <button
         onClick={() => setIsMobileOpen(!isMobileOpen)}
         className="fixed top-6 left-6 z-50 md:hidden p-2 rounded-lg bg-card border border-border"
+         aria-label={isMobileOpen ? "Fermer le menu de navigation" : "Ouvrir le menu de navigation"}
+         aria-expanded={isMobileOpen}
+         aria-controls="main-navigation"
       >
         {isMobileOpen ? <X size={20} /> : <Menu size={20} />}
       </button>

@@ -25,9 +25,9 @@ const HeroSection = ({ onScrollToPortfolio }: HeroSectionProps) => {
           <span className="gradient-text">Sandrine PICHLA</span>
         </h1>
 
-        <p className="text-lg sm:text-xl md:text-2xl text-muted-foreground mb-4">
+        <h2 className="text-lg sm:text-xl md:text-2xl text-muted-foreground mb-4">
           Développeuse Full Stack
-        </p>
+        </h2>
         
         <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8 px-4">
           <Link
@@ -48,13 +48,13 @@ const HeroSection = ({ onScrollToPortfolio }: HeroSectionProps) => {
         </div>
 
         <div className="flex justify-center gap-4 sm:gap-6 px-4">
-          <a href="https://github.com/SandrinePichla" className="p-3 bg-card rounded-lg border border-border hover:shadow-card transition-all duration-300">
+          <a href="https://github.com/SandrinePichla"  aria-label="Profil GitHub de Sandrine Pichla" className="p-3 bg-card rounded-lg border border-border hover:shadow-card transition-all duration-300">
             <Github size={20} />
           </a>
-          <a href="https://www.linkedin.com/in/sandrine-pichla-09514794/" className="p-3 bg-card rounded-lg border border-border hover:shadow-card transition-all duration-300">
+          <a href="https://www.linkedin.com/in/sandrine-pichla-09514794/"  aria-label="Profil LinkedIn de Sandrine Pichla" className="p-3 bg-card rounded-lg border border-border hover:shadow-card transition-all duration-300">
             <Linkedin size={20} />
           </a>
-          <a href="mailto:sandrinepichla@hotmail.com" className="p-3 bg-card rounded-lg border border-border hover:shadow-card transition-all duration-300">
+          <a href="mailto:sandrinepichla@hotmail.com" aria-label="Envoyer un mail à Sandrine Pichla" className="p-3 bg-card rounded-lg border border-border hover:shadow-card transition-all duration-300">
             <Mail size={20} />
           </a>
         </div>

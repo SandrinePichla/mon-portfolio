@@ -83,7 +83,7 @@ const PortfolioSection = () => {
               <div className="relative w-full h-72 rounded-xl overflow-hidden border-4 border-primary shadow-lg shadow-primary/50 flex items-center justify-center bg-background">
                 <img
                   src={project.image}
-                  alt={project.title}
+                  alt={""}
                   className="max-h-[85%] max-w-[90%] object-contain rounded-lg"
                 />                
               </div>
