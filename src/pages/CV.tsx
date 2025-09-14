@@ -57,14 +57,14 @@ const CV = () => {
           <h3 className="text-2xl font-display mb-6 text-center text-primary">
             Outils techniques
           </h3>
-          <ul className="space-y-2 text-muted-foreground">
-            <li>HTML / CSS : +++</li>
-            <li>JavaScript : ++</li>
-            <li>React / Vite: +++</li>
-            <li>Node.js / Express : +++</li>
-            <li>MongoDB : +++</li>
-            <li>PHP : +</li>
-          </ul>
+            <ul className="space-y-2 text-muted-foreground">
+              <li>HTML / CSS : <span className="text-primary">★★★★☆</span></li>
+              <li>JavaScript : <span className="text-primary">★★★★☆</span></li>
+              <li>React / Vite : <span className="text-primary">★★★★☆</span></li>
+              <li>Node.js / Express : <span className="text-primary">★★★★☆</span></li>
+              <li>MongoDB : <span className="text-primary">★★★★☆</span></li>
+              <li>PHP : <span className="text-primary">★★☆☆☆</span></li>
+            </ul>
         </div>
 
         {/* Bloc 2 */}
@@ -73,12 +73,12 @@ const CV = () => {
             Logiciels
           </h3>
           <ul className="space-y-2 text-muted-foreground">
-            <li>Logiciels bureautiques : +++</li>
-            <li>Photoshop : +++</li>
-            <li>Figma : +++</li>
-            <li>VSCode : +++</li>
-            <li>Postman : ++</li>
-            <li>Git / GitHub : ++</li>
+            <li>Logiciels bureautiques : <span className="text-primary">★★★★☆</span></li>
+            <li>Photoshop : <span className="text-primary">★★★★☆</span></li>
+            <li>Figma : <span className="text-primary">★★★★☆</span></li>
+            <li>VSCode : <span className="text-primary">★★★★☆</span></li>
+            <li>Postman : <span className="text-primary">★★★★☆</span></li>
+            <li>Git / GitHub : <span className="text-primary">★★★☆☆</span></li>
           </ul>
         </div>
 
@@ -87,13 +87,13 @@ const CV = () => {
           <h3 className="text-2xl font-display mb-6 text-center text-primary">
             Méthodes & pratiques
           </h3>
-          <ul className="space-y-2 text-muted-foreground">
-            <li>Responsive Design : ++</li>
-            <li>SEO / Accessibilité : +++</li>
-            <li>BEM / SCSS : ++</li>
-            <li>Agile / Scrum : ++</li>
-            <li>CI/CD (bases) : +</li>
-          </ul>
+            <ul className="space-y-2 text-muted-foreground">
+              <li>Responsive Design : <span className="text-primary">★★★★☆</span></li>
+              <li>SEO / Accessibilité : <span className="text-primary">★★★★☆</span></li>
+              <li>BEM / SCSS : <span className="text-primary">★★★★☆</span></li>
+              <li>Agile / Scrum : <span className="text-primary">★★★☆☆</span></li>
+              <li>CI/CD (bases) : <span className="text-primary">★★☆☆☆</span></li>
+            </ul>
         </div>
 
         {/* Bloc 4 */}
@@ -101,11 +101,11 @@ const CV = () => {
           <h3 className="text-2xl font-display mb-6 text-center text-primary">
             Langues
           </h3>
-          <ul className="space-y-2 text-muted-foreground">
-            <li>Anglais courant : +</li>
-            <li>Anglais technique : ++</li>
-            <li>Allemand scolaire : +</li>
-          </ul>
+            <ul className="space-y-2 text-muted-foreground">
+              <li>Anglais courant : <span className="text-primary">★★☆☆☆</span></li>
+              <li>Anglais technique : <span className="text-primary">★★★☆☆</span></li>
+              <li>Allemand scolaire : <span className="text-primary">★★☆☆☆</span></li>
+            </ul>
         </div>
       </div>
 
