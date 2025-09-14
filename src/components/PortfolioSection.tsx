@@ -113,7 +113,10 @@ const PortfolioSection = () => {
         
         <div className="grid md:grid-cols-1 lg:grid-cols-2 gap-8">
           {projects.map((project, index) => (
-            <div key={index} className="project-card group cursor-default">
+            <div key={index}  className={`project-card group cursor-default ${
+        index === projects.length - 1 ? "lg:col-span-2" : ""
+      }`}
+    >
               <div className="relative w-full h-72 rounded-xl overflow-hidden border-4 border-primary shadow-lg shadow-primary/50 flex items-center justify-center bg-background">
                 <img
                   src={project.image}
@@ -122,7 +125,7 @@ const PortfolioSection = () => {
                 />                
               </div>
               
-              <div className="p-6 md:p-8">
+              <div className="p-6 md:p-8 max-w-2xl mx-auto">
                 <h3 className="text-xl md:text-2xl font-display text-primary mb-4">
                   {project.title}
                 </h3>

@@ -101,10 +101,10 @@ const SkillsMindMap = () => {
       color: "secondary",
       position: { x: -300, y: 0 },
       skills: [
-        { name: "Chrome DevTools", level: 40, experience: "1 projet" },
-        { name: "Lighthouse", level: 30, experience: "1 projet" },
-        { name: "Meta", level: 80, experience: "1 projet" },
-        { name: "Wave", level: 80, experience: "1 projet" }
+        { name: "Chrome DevTools", level: 80, experience: "2 projets" },
+        { name: "Lighthouse", level: 80, experience: "2 projets" },
+        { name: "Meta", level: 80, experience: "2 projets" },
+        { name: "Wave", level: 80, experience: "2 projets" }
       ]
     },
     {
