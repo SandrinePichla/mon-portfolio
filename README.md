@@ -1,25 +1,25 @@
 # Mon Portfolio Développeur
 
-Bienvenue sur mon portfolio de développeuse web fullstack (React / Node / MongoDB).
+Bienvenue sur mon portfolio de développeuse web fullstack (React / Node).
 
 ## 🚀 Tech Stack
 
-- **Frontend** : React 18, React Router, Tailwind CSS
-- **Backend** : (à ajouter si backend lié)
-- **Design system** : basé sur Tailwind CSS avec une palette personnalisée
-- **Outils** : Vite, TypeScript, ESLint, GitHub Pages
+- **Frontend** : React 18, React Router, Tailwind CSS, Vite
+- **Backend** : Node.js, Express (Railway) pour la gestion du formulaire de contact
+- **Outils** : ESLint, Git, Netlify (déploiement frontend), Railway (backend)
 
 ## 🧩 Fonctionnalités principales
 
-- 📁 Présentation de projets
-- 📜 Parcours & compétences
-- 📩 Formulaire de contact
-- 📱 Responsive design
+- 📁 Présentation de mes projets (avec description, challenges, compétences développées)
+- 📜 Mon parcours et mes compétences
+- 📩 Formulaire de contact connecté au backend (Brevo pour l’envoi d’emails)
+- 📱 Responsive design (desktop, tablette, mobile)
+- 🔎 Accessibilité & SEO optimisés (Wave, Lighthouse, balises meta, Schema.org)
 
 ## 🌐 Déploiement
 
-Le site est déployé avec GitHub Pages :  
-👉 [Voir le site en ligne](https://sandrinepichla.github.io/mon-portfolio/)
+- **Frontend** : déployé sur Netlify 👉 [Voir le site en ligne](https://taupe-lollipop-8d4dc7.netlify.app/)  
+- **Backend** : déployé sur Railway pour la gestion des mails
 
 ## ▶️ Lancer le projet en local
 
@@ -30,29 +30,18 @@ npm install
 npm run dev
 ```
 
-## 📦 Déploiement GitHub Pages
-
-```bash
-npm run build
-npm run deploy
-```
-
-> Le fichier `vite.config.ts` est configuré pour adapter automatiquement le chemin (`base`) entre développement local et production GitHub Pages.
-
 ## ✨ Personnalisation
 
-Tu peux adapter :
-
-- Les couleurs dans `index.css`
-- Le contenu des sections dans `src/pages/Index.tsx` et `src/components/`
-- Les animations ou badges dans les composants UI
+- Les couleurs sont définies dans `index.css` (palette personnalisée)
+- Le contenu des projets est centralisé dans `PortfolioSection`
+- Les animations et composants UI sont dans `src/components/`
 
 ## ✅ À venir
 
-- [ ] Ajout du backend Node/Mongo (API de contact ou gestion projets ?)
-- [ ] SEO + meta tags personnalisés
-- [ ] Tests unitaires
+- [ ] Ajouter un panneau d’administration pour saisir les projets sans modifier le code
+- [ ] Améliorer la gestion des tests (unitaires, accessibilité)
+- [ ] Éventuellement intégrer une base MongoDB pour centraliser les projets
 
 ---
 
-© 2025 - Portfolio développé avec ❤️ par Sandrine Pichla
+© 2025 - Portfolio développé par Sandrine Pichla
