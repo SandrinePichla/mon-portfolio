@@ -6,6 +6,7 @@ import { HashRouter, Routes, Route } from "react-router-dom";
 import Index from "./pages/Index";
 import NotFound from "./pages/NotFound";
 import CV from "./pages/CV";
+import CVExport from "@/pages/CVExport";
 
 const queryClient = new QueryClient();
 
@@ -18,7 +19,7 @@ const App = () => (
         <Routes>
           <Route path="/" element={<Index />} />
           <Route path="*" element={<NotFound />} />
-          <Route path="/cv" element={<CV />} />
+          <Route path="/cv" element={<CV />} />          
         </Routes>
       </HashRouter>
     </TooltipProvider>

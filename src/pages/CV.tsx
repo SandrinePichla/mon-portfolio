@@ -17,9 +17,18 @@ const CV = () => {
           Développeuse Full Stack
         </h2>        
         <div className="mt-6 flex justify-center flex-wrap gap-6 text-sm text-muted-foreground">
-          <span>📍 48 rue des Ecumines 69210 SAINT-PIERRE-LA-PALUD</span>
-          <span>📞 06.72.75.81.48</span>
-          <span>✉️ sandrinepichla@hotmail.com</span>
+          <span>📍48 rue des Ecumines 69210 SAINT-PIERRE-LA-PALUD</span>
+          <span> 📞 06.72.75.81.48</span>
+          <span> ✉️ sandrinepichla@hotmail.com</span>
+          <span> 🔗 https://taupe-lollipop-8d4dc7.netlify.app</span>
+          <a
+            href="/cv-print.html"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-block bg-primary text-white px-4 py-2 rounded hover:bg-primary/80 transition"
+          >
+            🖨️ Voir la version imprimable
+          </a>
         </div>
       </div>
 
@@ -30,22 +39,16 @@ const CV = () => {
         </h3>
         <ul className="space-y-4 text-muted-foreground">
           <li>
-            <strong className="text-foreground">2025 :</strong> En cours de validation du diplôme de Développeur Web (Niveau 5, Bac +2) - OpenClassrooms
-            <br />
-            <span className="text-sm">
-              Front-end (HTML, CSS, JS, React), back-end (NodeJS, Express, MongoDB), gestion de projet, accessibilité & SEO.
-            </span>
+            <strong className="text-foreground">2025/10 :</strong> Développeuse Web (Niveau 5, Bac +2) - OpenClassrooms - Front-end (HTML, CSS, JS, React), back-end (NodeJS, Express, MongoDB), gestion de projet, accessibilité & SEO.            
           </li>
           <li>
-            <strong className="text-foreground">2021-2024 :</strong> Développement - apprentissage en libre accès (en cours) - OpenClassrooms
-            <br />
-            <span className="text-sm">Front-end (HTML, CSS, JS)</span>
+            <strong className="text-foreground">2021-2024 :</strong> Développement web - apprentissage en libre accès - OpenClassrooms - Front-end (HTML, CSS, JS)
           </li>
           <li>
-            <strong className="text-foreground">1988 :</strong> BTS Biologie Biochimie – Faculté Catholique de Lyon
+            <strong className="text-foreground">1988 :</strong> BTS Biologie Biochimie – ESTBB - LYON
           </li>
           <li>
-            <strong className="text-foreground">1986 :</strong> Baccalauréat D – Notre Dame des Minimes
+            <strong className="text-foreground">1986 :</strong> Baccalauréat D – LYON
           </li>
         </ul>
       </div>
@@ -122,7 +125,7 @@ const CV = () => {
             <p className="text-sm">
               <strong className="text-foreground">2003-2022 – Gérante Lucky Game</strong>
               <br />
-              Assemblage PC, formation informatique, maintenance et conseil en gestion patrimoniale.
+              Assemblage PC, formation informatique bureautique, maintenance PC.
             </p>
           </div>
           <div>

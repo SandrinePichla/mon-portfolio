@@ -34,8 +34,7 @@ const HeroSection = ({ onScrollToPortfolio }: HeroSectionProps) => {
           to="/cv"
           className="px-6 py-3 bg-gradient-primary rounded-lg font-semibold text-primary-foreground hover:shadow-elegant transition-all duration-300 flex items-center justify-center gap-2"
           target="_blank"
-          >
-          <Download size={18} />
+          >          
           Voir mon CV
           </Link>
           

@@ -100,23 +100,28 @@ const PortfolioSection = () => {
       liveLink: "https://sandrinepichla.github.io/mon-portfolio/",
       githubLink: "https://github.com/SandrinePichla/mon-portfolio "
     },
-
   ];
 
   return (
     <section className="px-6 bg-muted/20">
+
+       {/* Conteneur principal centré et limité en largeur */}
       <div className="max-w-6xl mx-auto">
+
+        {/* Titre et sous-titre de la section */}
         <h2 className="text-4xl font-display gradient-text mb-12 text-center">Projets</h2>
         <p className="text-lg text-muted-foreground text-center mb-16 max-w-2xl mx-auto">
           Découvrez une sélection de mes projets récents, alliant innovation technique et design soigné.
         </p>
         
+        {/* Grille qui affiche les projets */}
         <div className="grid md:grid-cols-1 lg:grid-cols-2 gap-8">
           {projects.map((project, index) => (
             <div key={index}  className={`project-card group cursor-default ${
         index === projects.length - 1 ? "lg:col-span-2" : ""
-      }`}
-    >
+        }`}
+        >
+              {/* Image du projet dans une carte */}
               <div className="relative w-full h-72 rounded-xl overflow-hidden border-4 border-primary shadow-lg shadow-primary/50 flex items-center justify-center bg-background">
                 <img
                   src={project.image}
@@ -125,11 +130,13 @@ const PortfolioSection = () => {
                 />                
               </div>
               
+              {/* Texte et détails sous l’image */}
               <div className="p-6 md:p-8 max-w-2xl mx-auto">
                 <h3 className="text-xl md:text-2xl font-display text-primary mb-4">
                   {project.title}
                 </h3>
                 
+                {/* Description courte */}
                 <p className="text-muted-foreground mb-6 leading-relaxed text-sm md:text-base">
                   {project.description}
                 </p>
@@ -146,6 +153,7 @@ const PortfolioSection = () => {
                   </div>
                 )}
 
+                {/* Liste des technos utilisées (badges) */}
                 <div className="flex flex-wrap gap-2 mb-6">
                   {project.technologies.map((tech) => (
                     <span key={tech} className="skill-badge text-xs">
@@ -154,6 +162,7 @@ const PortfolioSection = () => {
                   ))}
                 </div>
 
+                {/* Boutons : Voir le projet (demo) + Code source (GitHub) */}
                 <div className="flex flex-col sm:flex-row gap-3">
                   {project.liveLink ? (
                     <a
